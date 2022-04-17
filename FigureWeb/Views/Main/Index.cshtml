@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div id="AreaRound" class="col-sm-12 AllBlocks">
+    <span class="form-control" onclick="ToggleRound()">Площадь круга</span>
+    <div id="BlockRound" style="display:none">
+        <div class="col-sm-12 row AllBlocks">
+            <span class="col-sm-2">Введите радиус круга: </span>
+            <input id="txtRound" class="form-control col-sm-9 txtInput" type="text" placeholder="Введите радиус круга">
+        </div>
+        <div class="AllBlocks col-sm-12">
+            <span id="ResultRound" class="col-sm-12">Результат: </span>
+        </div>
+        <button class="btn btn-default col-sm-3 AllBlocks" id="btnRoundResult" onclick="GetAreaRound()">Вычислить</button>
+    </div>
+</div>
+
+<div id="AreaTriangle" class="col-sm-12 AllBlocks">
+    <span class="form-control" onclick="ToggleTriangle()">Площадь треугольника</span>
+    <div id="BlockTriangle" style="display:none">
+        <div class="col-sm-12 row AllBlocks">
+            <span class="col-sm-3">Введите первую сторону треугольника: </span>
+            <input id="txtTriangleA" class="form-control col-sm-9" type="text">
+        </div>
+        <div class="col-sm-12 row AllBlocks">
+            <span class="col-sm-3">Введите вторую сторону треугольника: </span>
+            <input id="txtTriangleB" class="form-control col-sm-9" type="text">
+        </div>
+        <div class="col-sm-12 row AllBlocks">
+            <span class="col-sm-3">Введите третью сторону треугольника: </span>
+            <input id="txtTriangleC" class="form-control col-sm-9" type="text">
+        </div>
+        <div class="AllBlocks col-sm-12">
+            <span id="ResultTriangle" class="col-sm-12">Результат: </span>
+        </div>
+        <button class="btn btn-default col-sm-3 AllBlocks" onclick="GetAreaTriangle()">Вычислить</button>
+    </div>
+</div>
+
+<div id="AreaRectangle" class="col-sm-12 AllBlocks">
+    <span class="form-control" onclick="ToggleFigure()">Площадь неизвестной фигуры</span>
+    <div id="BlockFigure" style="display:none">
+        <span>
+            Внимание! Площать фигуры без определния ее типа считается всегда с некоторой погрешностью.
+            Для получения результата необходимо заключить искомую фигуру в прямоугольник и затем вычесть площади прямоугольников которые
+            поместятся между границами искомой фигуры и внешнего прямоугольника.
+        </span>
+
+        <div id="outDoorRectangle">
+            <div class="col-sm-12 row AllBlocks">
+                <span class="col-sm-3">Введите длину внешнего прямоугольника: </span>
+                <input id="txtRectangleA" class="form-control col-sm-9" type="text">
+            </div>
+            <div class="col-sm-12 row AllBlocks">
+                <span class="col-sm-3">Введите ширину внешнего прямоугольника: </span>
+                <input id="txtRectangleB" class="form-control col-sm-9" type="text">
+            </div>
+        </div>
+            <div id="inDoorSquare">
+                <div class="AloneTriangle">
+                    <div class="col-sm-12 row AllBlocks">
+                        <span class="col-sm-3">Введите длину внутреннего прямоугольника: </span>
+                        <input class="form-control col-sm-9 IndoorRectangleWidth" type="text">
+                    </div>
+                    <div class="col-sm-12 row AllBlocks">
+                        <span class="col-sm-3">Введите ширину внутреннего прямоугольника: </span>
+                        <input class="form-control col-sm-9 IndoorRectangleHeigh" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 AllBlocks">
+                <span id="ResultRectangle" class="col-sm-12 row AllBlocks">Результат: </span>
+                <button id="btnAddRectangle" class="btn btn-default col-sm-3" onclick="AppendBlockFigure()">Добавить</button>
+                <button id="btnRectangleResult" class="btn btn-default col-sm-3" onclick="GetAreaFigure()">Вычислить</button>
+            </div>
+        </div>
+</div>
