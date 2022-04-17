@@ -134,8 +134,8 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\FigureBLL\FigureBLL\FigureBLL.csproj">
-      <Project>{aa92e815-bb9d-4377-acd7-6cda32d3a571}</Project>
+    <ProjectReference Include="..\FigureBLL\FigureBLL.csproj">
+      <Project>{bc0b0872-1205-460f-9503-3041d2fb100e}</Project>
       <Name>FigureBLL</Name>
     </ProjectReference>
   </ItemGroup>
